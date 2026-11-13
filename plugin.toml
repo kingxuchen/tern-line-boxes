@@ -1,0 +1,7 @@
+schema = 1
+
+id = "line-boxes"
+name = "Looser line boxes"
+version = "0.4.0"
+description = "Stops Tern from cutting descenders (g, y, p) in the composer caption, the bottom status line, tool-card rows, the slash-command list and the terminal block bar (command lens + Native/Raw pair)."
+window = "window.luau"
