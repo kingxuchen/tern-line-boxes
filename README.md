@@ -32,6 +32,15 @@ tern plugin install https://github.com/kingxuchen/tern-line-boxes
 `github.com/kingxuchen/tern-line-boxes` also works as a shorthand, and the
 `+ Install` action in Tern's plugin list accepts the same URL.
 
+Both forms clone over HTTPS, so they need a working TLS connection to
+`github.com` itself. Where that host is blocked or its DNS is poisoned (a
+resolved address like `57.155.x.x` instead of GitHub's own), install over SSH
+instead:
+
+```sh
+tern plugin install git@github.com:kingxuchen/tern-line-boxes.git
+```
+
 Upgrade an installed copy after new pushes:
 
 ```sh
