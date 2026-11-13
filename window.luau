@@ -64,3 +64,15 @@ tern.css("line-boxes-block-seg", [[
 	box-shadow: inset 0 0 0 1px var(--l2) !important;
 }
 ]])
+
+-- The left sidebar's host row (tab chat style, label-left layout) shows the
+-- machine name in the same trap: `.tn-vt-host-name > span.nm` gets a line box
+-- of exactly 1em — measured live: 14.42px box for a 14.42px font inside a
+-- 27.69px button, the g descenders of "fanbingbingdeMacBook-Pro" cut flat at
+-- the box edge. 1.5 gives 21.64px, still inside the button (span stays
+-- centered, ~3px slack each side), and the button rect does not move.
+tern.css("line-boxes-vt-host", [[
+.tn-vt .nm {
+	line-height: 1.5 !important;
+}
+]])
